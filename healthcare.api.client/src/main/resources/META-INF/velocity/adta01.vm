@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADT_A01
+  xmlns="urn:hl7-org:v2xml"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:hl7-org:v2xml ADT_A01.xsd">
+	<MSH>
+		<MSH.1>|</MSH.1> <!--Field Seprator -->
+		<MSH.2>^~\&amp;</MSH.2> <!-- Encoding character -->
+		<MSH.3>
+			<HD.1>${application.type}</HD.1>
+		</MSH.3>			
+	</MSH>
+	<ENV>
+	</ENV>
+	<PID>
+	</PID>
+	
+<!-- Will be Under Loop NEXT TO KIN  -->	
+	<NK1>
+	</NK1>
+	
+<!-- Patient Visit Section akka PV1 -->
+
+<!-- Patient Visit additional Information akka PV2 -->
+
+<!-- Observation Result Section akka OBX -->
+
+<!-- Diagnosis segment akka DG1 -->
+
+<!-- Guaranter Model akka GT1 : for insurance -->	
+</<ADT_A01>

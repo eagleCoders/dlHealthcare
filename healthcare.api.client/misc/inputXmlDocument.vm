@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <security>
+        <id>1004950</id>
+        <application>HISMIMOS</application>
+    </security>
+    <oid></oid><!-- cda/DS/eR unique id  -->
+    <uuid></uuid><!-- cda/DS/eR repository unique id  -->
+    <id>45094</id><!-- discharge summary id  -->
+    <setId>45094</setId><!-- discharge summary id/ parent id  -->
+    <type id="1.3.6.1.4.1.19376.1.5.3.1.1.4">DISCHARGE SUMMARY</type><!-- type id of DS or eR  -->
+    <name>MIMOS Clinic Discharge Summary</name><!--  name of document  -->
+    <effectiveTime>20121023170500+0800</effectiveTime><!--  creation time of DS/eR  -->
+    <admitDate>20121020093000+0800</admitDate><!--   -->
+    <dischargeDate>20121023133000+0800</dischargeDate><!--   -->
+    <encounter>GIM-10-436</encounter><!--   -->
+    <confidentiality>R</confidentiality><!-- confidentiality for whole document. can be overide in section  -->
+    <patient>
+        <type id="I">Inpatient</type><!-- I/O   -->
+        <name>Foo</name>
+        <sex id="L">M</sex><!-- L/P/R/U   -->
+        <race id="0200">Chinese</race><!-- 0100 - Malay/0200 - Chinese/0300 - Indian   -->
+        <marital id="1">Single</marital><!-- 0-no info/1-single/2/3/4/9-others   -->
+        <nationality id="MYS">Malaysia</nationality>
+        <dob>19680123</dob>
+        <globalId></globalId><!-- get patient global id from pix/pdq  -->
+        <pid id="20" name="MRN">A010853</pid><!-- mandatory MRN -->
+        <!--  first value will be pick  -->
+        <pid id="02" name="New IC (Eliminate dash)">680123066789</pid>
+        <pid id="01" name="Old IC">124389728</pid>
+        <pid id="08" name="Passport">A1234567890</pid>
+        <pid id="03" name="Millitary Card Number"></pid>
+        <pid id="04" name="Police Card Number"></pid>
+        <pid id="07" name="Work Permit"></pid>
+        <pid id="05" name="Mother's IC"></pid>
+        <pid id="06" name="Father's IC"></pid>
+        <pid id="09" name="Birth Certificate"></pid>
+        <pid id="11" name="Driving License"></pid>
+        <pid id="10" name="Pension Card"></pid>
+        <guardian>
+            <name>Foo Too</name>
+            <relation>Son</relation>
+        </guardian>
+        <address id="H">
+            <street></street>
+            <city></city>
+            <state></state>
+            <postalcode></postalcode>
+            <country></country>
+        </address>
+        <address id="WP">
+            <street></street>
+            <city></city>
+            <state></state>
+            <postalcode></postalcode>
+            <country></country>
+        </address>
+        <contact id="H" name="tel">tel:+1234</contact>
+        <contact id="WP" name="tel"></contact>
+        <contact id="WP" name="fax">fax:+</contact>
+        <contact id="WP" name="mail">mailto:</contact>
+        <contact id="MC" name="tel">tel:+</contact>
+    </patient>
+    <hospital>
+        <id>2.16.458.1.100000.1.2</id>
+        <name>MIMOS Clinic</name>
+        <code>MIMOS</code><!-- code from PIK / azwa for POC -->
+        <abbreviation>MC</abbreviation>
+        <address id="WP">
+            <street>-</street>
+            <city>-</city>
+            <state>-</state>
+            <postalcode>-</postalcode>
+            <country>-</country>
+        </address>
+        <contact id="WP" name="tel">tel:+</contact>
+        <facility id="GIM">General internal medicine clinic</facility>
+    </hospital>
+    <author>
+        <id>II90</id>
+        <name>DR NURUL AIN SHAM ISMAIL</name>
+        <suffix>MD</suffix>
+        <dicipline></dicipline>
+        <rank></rank>
+        <department></department>
+        <hospital id="2.16.458.1.100000.1.2">MC</hospital>
+    </author>
+    <doctor>
+        <id>II90</id>
+        <name>DR NURUL AIN SHAM ISMAIL</name>
+        <suffix>MD</suffix>
+        <hospital id="2.16.458.1.100000.1.2">MC</hospital>
+    </doctor>
+    <consultant>
+        <id>II90</id>
+        <name>DR NURUL AIN SHAM ISMAIL</name>
+        <suffix>MD</suffix>
+        <hospital id="2.16.458.1.100000.1.2">MC</hospital>
+    </consultant>
+    <section name="Hospital Admission Diagnosis" id="46241-6" confidentiality="R">
+        The hospital admitting diagnosis section shall contain a narrative description of the primary reason for admission to a hospital facility.
+    </section>
+    <section name="Active Problems" id="11450-4" confidentiality="R">
+        The active problem section shall contain a narrative description of the conditions currently being monitored for the patient.
+    </section>
+    <section name="Dischagre Diagnosis" id="11535-2" confidentiality="R">
+        The hospital admitting diagnosis section shall contain a narrative description of the primary reason for admission to a hospital facility.
+        The discharge diagnosis section shall contain a narrative description of the conditions that need to be monitored after discharge from the hospital and those that were resolved during the hospital course.
+    </section>
+    <section name="Resolved Problems" id="11348-0" confidentiality="R">
+        The resolved problems section shall contain a narrative description of the conditions the patient suffered in the past.
+    </section>
+    <section name="List of Surgeries" id="47519-4" confidentiality="R">
+        The list of surgeries section shall contain a narrative description of the diagnostic and therapeutic operative procedures and associated anesthetic techniques the patient received in the past.
+    </section>
+    <section name="Allergies and Other Adverse Reactions" id="48765-2" confidentiality="R">
+        The adverse and other adverse reactions section shall contain a narrative description of the substance intolerances and the associated adverse reactions suffered by the patient.
+    </section>
+    <section name="Medications" id="10160-0" confidentiality="R">
+        The medications section shall contain a description of the relevant medications for the patient, e.g. an ambulatory prescription list.
+    </section>
+    <section name="Results" id="30954-2" confidentiality="V">
+        The results section shall contain a narrative description of the patient’s relevant studies.
+    </section>
+    <section name="Hospital Discharge Studies Summary" id="11493-4" confidentiality="R">
+        The hospital studies summary section shall contain a narrative description of the relevant diagnostic procedures the patient received during the hospital admission.
+    </section>
+    <section name="Care Plan" id="18776-5" confidentiality="R">
+        The care plan section shall contain a narrative description of the expectations for care including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient.
+    </section>
+    <section name="Care Plan" id="18776-5" confidentiality="R">
+        appointment as outpatient to radiology on 20/11/2012
+    </section>
+</root>

@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package healthcare.api.client.hl7.type;
+
+/**
+ * @author anees-ur-rehman
+ *
+ */
+public enum HL7OBXSegmentTypes {
+	
+	OBSERVATION_ID("OBX.1"), OBSERVATION_DATA_VALUE_TYPE("OBX.2"), OBSERVATION_LIONC_IDENTIFER("OBX.3") ,OBSERVATION_SUB_ID("OBX.4"), 
+	OBSERVATION_VALUES_LIST_VARIES("OBX.5"), UNITS_LIST("OBX.6"), REFERENCE_RANGE("OBX.7"), ABNORMAL_FLAGS_LIST("OBX.8"), PROBABILITY("OBX.9"),
+	NATURE_OF_ABNORMAL_TEST("OBX.10"), OBSERVATION_RESULT_STATUS("OBX.11"), DATE_LAST_OBSERVATION_NORMAL_VALUES("OBX.12"), USER_DEFIENED_ACCESS_CHECKS("OBX.13"),
+	DATE_TIME_OF_OBSERVATION("OBX.14"), PRODUCER_ID("OBX.15"), RESPONISBLE_OBSERVER_LIST("OBX.16"), OBSERVATION_METHOD_LIST("OBX.17");
+	
+	private String value;
+	
+	private HL7OBXSegmentTypes(String value){
+		this.value = value;
+	}
+	
+	public String getValue(){
+		return this.value;
+	}
+
+}

@@ -1,0 +1,31 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camel="http://camel.apache.org/schema/spring"
+	xmlns:ctx="http://www.springframework.org/schema/context" xmlns:cxf="http://camel.apache.org/schema/cxf"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:prop="http://camel.apache.org/schema/placeholder" xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+	xmlns:osgi="http://camel.apache.org/schema/osgi" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xmlns:http="http://cxf.apache.org/transports/http/configuration"
+	xmlns:sec="http://cxf.apache.org/configuration/security"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+       http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
+       http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+       http://www.springframework.org/schema/osgi-compendium
+       http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium-1.2.xsd
+       http://www.springframework.org/schema/osgi
+       http://www.springframework.org/schema/osgi/spring-osgi.xsd
+       http://camel.apache.org/schema/osgi
+       http://camel.apache.org/schema/osgi/camel-osgi.xsd
+       http://cxf.apache.org/configuration/security http://cxf.apache.org/schemas/configuration/security.xsd
+       http://cxf.apache.org/transports/http/configuration http://cxf.apache.org/schemas/configuration/http-conf.xsd">
+
+	<camel:camelContext xmlns="http://camel.apache.org/schema/spring"
+		id="dl-client-context">
+		<camel:route>
+			<camel:from uri="quartz://dlHealth/processhl7?cron=0 0/2 * * * ?"></camel:from>
+			<camel:to uri="direct-vm:hl7message"></camel:to>
+		</camel:route>
+	</camel:camelContext>
+</beans>

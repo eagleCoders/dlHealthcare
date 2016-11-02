@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package healthcare.api.client.hl7.type;
+
+/**
+ * @author anees-ur-rehman
+ *
+ */
+public enum HL7DG1SegmentTypes {
+	
+	DIAGNOSIS_ID("DG1.1"), DIAGNOSIS_CODING_METHOD("DG1.2"), DIAGNOSIS_CODE("DG1.3"), DIAGNOSIS_DESCRIPTION("DG1.4"), DIAGNOSIS_DATE_TIME("DG1.5"),
+	DIAGNOSIS_TYPE("DG1.6"), MAJOR_DIAGNOSTIC_CATEGORY("DG1.7"), DIAGNOSTIC_RELATED_GROUP("DG1.8"), DRG_APPROVAL_INDICATOR("DG1.9"), DRG_GROUP_REVIER_CODE("DG1.10"),
+	OUTLIER_TYPE("DG1.11"), OUTLIER_DAYS("DG1.12"), OUTLIER_COST("DG1.13"), GROUPER_VERSION_TYPE("DG1.14"), DIAGNOSIS_PRIORITY("DG1.15"), DIAGNOSING_CLINICIAN_LIST("DG1.16"),
+	DIAGNOSIS_CLASSIFICATION("DG1.17"), CONFIDENTIAL_INDICATOR("DG1.18"), ATTESTATION_DATE_TIME("DG1.19");
+	
+	private String value;
+	
+	private HL7DG1SegmentTypes(String value){
+		this.value = value;
+	}
+	
+	public String getValue(){
+		return this.value;
+	}
+
+}
